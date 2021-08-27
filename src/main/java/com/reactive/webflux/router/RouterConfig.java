@@ -1,13 +1,14 @@
-package com.javatechie.webflux.router;
+package com.reactive.webflux.router;
 
-import com.javatechie.webflux.handler.CustomerHandler;
-import com.javatechie.webflux.handler.CustomerStreamHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.reactive.function.server.RouterFunction;
 import org.springframework.web.reactive.function.server.RouterFunctions;
 import org.springframework.web.reactive.function.server.ServerResponse;
+
+import com.reactive.webflux.handler.CustomerHandler;
+import com.reactive.webflux.handler.CustomerStreamHandler;
 
 @Configuration
 public class RouterConfig {

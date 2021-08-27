@@ -1,4 +1,4 @@
-package com.javatechie.webflux.dto;
+package com.reactive.webflux.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

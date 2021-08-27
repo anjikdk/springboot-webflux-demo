@@ -1,7 +1,8 @@
-package com.javatechie.webflux.handler;
+package com.reactive.webflux.handler;
 
-import com.javatechie.webflux.dao.CustomerDao;
-import com.javatechie.webflux.dto.Customer;
+import com.reactive.webflux.dao.CustomerDao;
+import com.reactive.webflux.dto.Customer;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;

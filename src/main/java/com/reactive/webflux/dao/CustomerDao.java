@@ -1,7 +1,9 @@
-package com.javatechie.webflux.dao;
+package com.reactive.webflux.dao;
 
-import com.javatechie.webflux.dto.Customer;
 import org.springframework.stereotype.Component;
+
+import com.reactive.webflux.dto.Customer;
+
 import reactor.core.publisher.Flux;
 
 import java.time.Duration;

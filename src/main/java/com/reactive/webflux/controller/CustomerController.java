@@ -1,7 +1,8 @@
-package com.javatechie.webflux.controller;
+package com.reactive.webflux.controller;
 
-import com.javatechie.webflux.dto.Customer;
-import com.javatechie.webflux.service.CustomerService;
+import com.reactive.webflux.dto.Customer;
+import com.reactive.webflux.service.CustomerService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
