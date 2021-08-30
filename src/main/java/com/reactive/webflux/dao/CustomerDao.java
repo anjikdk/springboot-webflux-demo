@@ -4,6 +4,7 @@ import org.springframework.stereotype.Component;
 
 import com.reactive.webflux.dto.Customer;
 
+import lombok.extern.slf4j.Slf4j;
 import reactor.core.publisher.Flux;
 
 import java.time.Duration;
@@ -12,8 +13,8 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 @Component
+@Slf4j
 public class CustomerDao {
-
 
     private static void sleepExecution(int i){
         try {
@@ -26,11 +27,10 @@ public class CustomerDao {
     public List<Customer> getCustomers()  {
         return IntStream.rangeClosed(1, 10)
                 .peek(CustomerDao::sleepExecution)
-                .peek(i -> System.out.println("processing count : " + i))
+                .peek(i -> log.info("processing count : " + i))
                 .mapToObj(i -> new Customer(i, "customer" + i))
                 .collect(Collectors.toList());
     }
-
 
     public Flux<Customer> getCustomersStream()  {
         return Flux.range(1,10)
@@ -38,7 +38,6 @@ public class CustomerDao {
                 .doOnNext(i -> System.out.println("processing count in stream flow : " + i))
                 .map(i -> new Customer(i, "customer" + i));
     }
-
 
     public Flux<Customer> getCustomerList()  {
         return Flux.range(1,50)

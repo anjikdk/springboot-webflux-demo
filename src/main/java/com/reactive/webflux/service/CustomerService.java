@@ -15,7 +15,6 @@ public class CustomerService {
     @Autowired
     private CustomerDao dao;
 
-
     public List<Customer> loadAllCustomers() {
         long start = System.currentTimeMillis();
         List<Customer> customers = dao.getCustomers();
@@ -23,8 +22,6 @@ public class CustomerService {
         System.out.println("Total execution time : " + (end - start));
         return customers;
     }
-
-
 
     public Flux<Customer> loadAllCustomersStream() {
         long start = System.currentTimeMillis();
